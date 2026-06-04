@@ -1,0 +1,245 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$space: "Space Grotesk", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$mono: "Space Mono", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+.space-grotesk {
+  font-family: $space;
+}
+.font-mono {
+  font-family: $mono;
+}
+
+// Colors
+
+$red: #DE3C4B;
+$red-500: #BD3844;
+$red-600: #AD3641;
+$black: #181818;
+$black-900: #181818;
+$black-800: #3A3C40;
+$black-700: #525559;
+$black-600: #87898C;
+$black-500: #BDBEBF;
+$black-400: #D1D4D7;
+$black-300: #DFE2E5;
+$black-200: #E6EAEF;
+$black-100: #F6F7F9;
+$smoke: #2A3330;
+$neon: #7CF5BD;
+$mint: #CBE5C8;
+$off-white: #F5F3ED;
+$white: #FFFFFF;
+$link: #0051D3;
+$plum: #BE226C;
+$plum-900: #2E0216;
+$plum-800: #420521;
+$plum-700: #830A42;
+$plum-600: #A01657;
+$plum-500: #BE226C;
+$plum-400: #DB2E81;
+$plum-300: #E25F9C;
+$plum-200: #E891B7;
+$plum-100: #FCDDE8;
+$blue: #0040AF;
+$blue-900: #010024;
+$blue-800: #001846;
+$blue-700: #002469;
+$blue-600: #002F8B;
+$blue-500: #0040AF;
+$blue-400: #0051D3;
+$blue-300: #3D7ADA;
+$blue-200: #7BA2E0;
+$blue-100: #EAF2FD;
+$yellow: #65C79A;
+$yellow-900: #322207;
+$yellow-800: #403013;
+$yellow-700: #705421;
+$yellow-600: #A07830;
+$yellow-500: #CF9B3E;
+$yellow-400: #FFBF4D;
+$yellow-300: #FFD074;
+$yellow-200: #FCDC9C;
+$yellow-100: #F8E7C5;
+$green: #65C79A;
+$green-900: #1F3D2F;
+$green-800: #1B5239;
+$green-700: #366B53;
+$green-600: #4E9976;
+$green-500: #65C79A;
+$green-400: #7CF5BD;
+$green-300: #9AF4C9;
+$green-200: #B9F4D5;
+$green-100: #D7F3E1;
+$data-green: #437A5D;
+$data-spring: #99c9a7;
+$data-blue: #436990;
+$data-slate: #778CA3;
+$data-purple: #8C7A9A;
+$data-red: #965a63;
+$data-orange: #E38D57;
+$data-gold: #D7AD56;
+$data-neutral: #C4D0C3;
+$data-gridline: #D1DED0;
+$data-background: #E9F1E8;
+
+.red-600 {
+  color: $red-600;
+}
+
+// Modal
+
+.exit-intent {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0;
+  max-width: 480px;
+  background-color: $black;
+  z-index: 100;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+  transition: width .3s ease-in-out;
+  &.max-w-full {
+    max-width: 100%;
+  }
+  p {
+    @media only screen and (max-width: 1000px) {
+      font-size: 20px;
+    }
+  }
+}
+
+.exit-intent:target {
+  visibility: visible;
+  opacity: 1;
+  width: 100%;
+  transition: width .3s ease-in-out;
+}
+
+.close-exit-intent {
+  background: rgba(0, 0, 0, 0.7);
+  cursor: default;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out;
+  z-index: 90;
+}
+
+.exit-intent:target+.close-exit-intent {
+  opacity: 1;
+  visibility: visible;
+  width: 100%;
+}
+
+@keyframes changeWidth {
+    0% {
+        width: 0;
+        left: 0;
+    }
+    50% {
+        width: 100%;
+        right: 0;
+    }
+    100% {
+        width: 0;
+        right: 0;
+    }
+}
+
+.modal-trigger {
+  border-bottom: 2px solid $black;
+  transition: background .3s ease-in-out;
+  overflow: hidden;
+  position: relative;
+  &:hover {
+    background: $neon;
+    color: $black;
+  }
+  a:after {
+    animation: changeWidth 3s ease-in-out infinite;
+    content:"";
+    display: block;
+    position: absolute;
+    height: 2px;
+    bottom: -2px;
+    background-color: $black;
+  }
+}
+
+// Styles
+
+html {
+  font-family: $space;
+  height: 100%;
+  color: $black;
+  background: $white;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  padding: 32px;
+}
+
+h1 {
+  font-family: $space;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.4;
+  @media only screen and (max-width: 960px) {
+    font-size: 26px;
+  }
+}
+
+h2, h3, h4 {
+  font-family: $space;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.4;
+  @media only screen and (max-width: 960px) {
+    font-size: 20px;
+  }
+}
+
+p {
+  font-family: $space;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+a {
+  color: #0051d3;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.navigation {
+  a {
+    color: #181818;
+  }
+}
+
+// Buttons
+
+
+// Header
+
+
+// Footer

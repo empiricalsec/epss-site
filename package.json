@@ -1,0 +1,28 @@
+{
+  "name": "empirical",
+  "private": true,
+  "version": "0.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "prebuild": "rm -rf dist && rm -rf production",
+    "start": "parcel --no-source-maps --no-cache",
+    "build": "parcel build --public-url ./ --no-source-maps --no-cache && cp -R ./src/public/. ./production"
+  },
+  "targets": {
+    "default": {
+      "distDir": "./production"
+    }
+  },
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.15.1"
+  },
+  "devDependencies": {
+    "@parcel/packager-raw-url": "2.15.1",
+    "@parcel/transformer-jsonld": "2.15.1",
+    "parcel": "^2.15.1",
+    "parcel-namer-hashless": "^1.0.7"
+  },
+  "parcel-namer-hashless": {
+    "log": false
+  }
+}
