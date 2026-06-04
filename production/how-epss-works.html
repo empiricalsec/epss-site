@@ -11,7 +11,7 @@
         <div class="bg-white border border-gray-300 flex flex-col h-fit max-md:border-l-0 max-md:border-r-0 max-md:mr-0 max-md:mt-[44px] max-md:rounded-none mr-4 mt-8 rounded-lg shadow-xl">
           <ul class="flex flex-col flex-grow gap-2 navigation py-3">
             <li class="flex flex-row gap-2 px-4"><p><a href=index.html>Home</a></li>
-            <li class="flex flex-row gap-2 px-4"><p><a href=how-epss-works.html>How EPSS Works</a></li>
+            <li class="flex flex-row gap-2 px-4"><p><a href=#>How EPSS Works</a></li>
             <li class="flex flex-row gap-2 px-4"><p><a href=#>Live Scores and Charts</a></li>
             <li class="flex flex-row gap-2 px-4"><p><a href=#>API</a></li>
             <li class="flex flex-row gap-2 px-4"><p><a href=https://github.com/empiricalsec/epss_scores target=_blank rel="noopener noreferrer">GitHub Scoring History <img class="-mt-1 h-[16px] inline-flex" src=icon-external.svg alt="external link"></a></li>
@@ -26,7 +26,7 @@
       <div class="flex flex-col gap-4 max-lg:order-2 max-w-[300px] md:h-[calc(100vh-70px)] md:shrink-0 md:sticky md:top-[32px] order-1 w-full">
         <ul class="flex flex-col flex-grow gap-2 max-md:mt-0 mt-10 navigation">
           <li class="flex flex-row gap-2"><p>-<p><a href=index.html>Home</a></li>
-          <li class="flex flex-row gap-2"><p>-<p><a href=how-epss-works.html>How EPSS Works</a></li>
+          <li class="flex flex-row gap-2"><p>-<p><a href=#>How EPSS Works</a></li>
           <li class="flex flex-row gap-2"><p>-<p><a href=#>Live Scores and Charts</a></li>
           <li class="flex flex-row gap-2"><p>-<p><a href=#>API</a></li>
           <li class="flex flex-row gap-2"><p>-<p><a href=https://github.com/empiricalsec/epss_scores target=_blank rel="noopener noreferrer">GitHub Scoring History <img class="-mt-1 h-[16px] inline-flex" src=icon-external.svg alt="external link"></a></li>
@@ -41,48 +41,27 @@
       <div class="flex flex-col gap-4 items-center max-md:mb-0 max-md:order-1 my-20 order-2 w-full">
         <div class="flex flex-col gap-4 max-w-[820px] w-full">
           <img class="h-[64px] max-lg:h-[48px] mb-12 w-fit" src=assets/epss-logo.svg alt="EPSS Logo">
-          <h1>What is EPSS?</h1>
-          <h2>The <strong><span class=red-600>Exploit Prediction</span> Scoring System</strong> (EPSS) is a data-driven machine-learning model that estimates the probability that a published CVE will be exploited in the wild in the next 30 days.</h2>
-          <p>It replaces subjective severity judgments with empirical signals from observed exploitation and ongoing activity, helping you focus limited remediation effort where attacks are most likely. EPSS publishes a 0–1 probability (with ranking percentiles) every day for every CVE and makes the data freely and openly accessible via CSV and API, so it slots easily into workflows and dashboards.</p>
-        </div>
-        <div class="flex flex-col gap-4 max-w-[820px] mt-6 w-full">
-          <h1>Goals</h1>
-          <div class="flex flex-col gap-0">
+          <h1>How EPSS Works</h1>
+          <h2>EPSS is a daily estimate of the probability of exploitation activity being observed over the next 30 days. It is designed from the ground up to make the best use of all of the information available and it does this in five steps:</h2>
+          <h1 class=mt-6>The Steps</h1>
+          <div class="flex flex-col gap-0 mb-6">
             <h2 class="border border-b-0 border-gray-300 p-8 rounded-t-lg w-full">
-            <strong>1. Clarify how EPSS works,</strong> its strengths and limitations, and provide accessible guidance to promote informed and transparent use across the community and industry.</h2>
+              1. Collect as much vulnerability information as we can from a variety of sources.
+            </h2>
             <h2 class="border border-b-0 border-gray-300 p-8 w-full">
-              <strong>2. Help defenders incorporate EPSS</strong> into their vulnerability management and quantitative risk models through practical examples, shared workflows, and open discussions.</h2>
+              2. Collect evidence of daily exploitation activity.
+            </h2>
+            <h2 class="border border-b-0 border-gray-300 p-8 w-full">
+              3. Train a model: discover/learn the relationship between the vulnerability information and the exploitation activity.
+            </h2>
+            <h2 class="border border-b-0 border-gray-300 p-8 w-full">
+              4. Measure the performance of the model, tweak and repeat step 3 to optimize the model.
+            </h2>
             <h2 class="border border-gray-300 p-8 rounded-b-lg w-full">
-              <strong>3. Create an open forum</strong> for experimentation, feedback, and constructive criticism to improve understanding of EPSS, inspire enhancements, and strengthen trust in data-driven vulnerability prioritization.</h2>
+              5. On a daily basis: refresh the vulnerability information (step 1) and use the model (step 3) to produce daily estimates of the probability of exploitation in the next 30 days for each published CVE.
+            </h2>
           </div>
-        </div>
-        <div class="flex flex-col gap-4 max-w-[820px] mt-6 w-full">
-          <h1>Chairs</h1>
-          <ul class="grid grid-cols-2 max-md:grid-cols-1">
-            <li><h2><strong>Jay Jacobs</strong></h2><p>Chief Data Scientist at Empirical Security</li>
-            <li><h2><strong>Stephen Shaffer</strong></h2><p>Principal Security Engineer at Moderna</li>
-          </ul>
-        </div>
-        <div class="flex flex-col gap-4 max-w-[820px] mt-6 w-full">
-          <h1>Acknowledgements</h1>
-          <h2>The EPSS User SIG is grateful for the invaluable contributions of our members. Key contributors are listed below.</h2>
-          <ul class="gap-4 grid grid-cols-3 max-md:grid-cols-1 max-xl:grid-cols-2">
-            <li><h2><strong>Jay Jacobs</strong></h2><p>Empirical Security</li>
-            <li><h2><strong>Sasha Romanosky</strong></h2><p>RAND</li>
-            <li><h2><strong>Ben Edwards</strong></h2><p>BitSight</li>
-            <li><h2><strong>Michael Roytman</strong></h2><p>Empirical Security</li>
-            <li><h2><strong>Idris Adjerid</strong></h2><p>Virginia Tech</li>
-            <li><h2><strong>Armin Sarabi</strong></h2><p>University of Michigan</li>
-            <li><h2><strong>Octavian Suciu</strong></h2><p>University of Maryland</li>
-            <li><h2><strong>David Severski</strong></h2><p>Cyentia Institute</li>
-            <li><h2><strong>Jerry Gamblin</strong></h2><p>Cisco</li>
-            <li><h2><strong>Chris Madden</strong></h2><p>Yahoo</li>
-            <li><h2><strong>Stephen Shaffer</strong></h2><p>Moderna</li>
-          </ul>
-        </div>
-        <div class="flex flex-col gap-4 max-w-[820px] mt-6 w-full">
-          <h1>FIRST Support</h1>
-          <h2>All of us are very grateful to the staff and volunteers at FIRST for their efforts in supporting the administration and hosting of the SIG.</h2>
+           <h2>We will walk through these steps below. For those wanting to know more, a detailed explanation of the background and rigor put into EPSS is covered in the <a href=https://arxiv.org/abs/2302.14172 target=_blank rel="noopener noreferrer">latest published EPSS paper.</a></h2>
         </div>
       </div>
     </main>
