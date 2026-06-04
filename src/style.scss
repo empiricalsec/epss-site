@@ -83,9 +83,19 @@ $data-gold: #D7AD56;
 $data-neutral: #C4D0C3;
 $data-gridline: #D1DED0;
 $data-background: #E9F1E8;
+$first-green: #1A4A2A;
+$first-orange: #EF7D00;
 
 .red-600 {
   color: $red-600;
+}
+
+.first-green {
+  color: $first-green;
+}
+
+.first-orange {
+  color: $first-orange;
 }
 
 // Modal
@@ -245,10 +255,19 @@ p.footer {
   font-size: 16px;
 }
 
-// Buttons
-
 
 // Header
+
+header {
+  background: $first-green;
+  color: $white;
+  a {
+    color: $white;
+  }
+  p {
+    font-size: 17px;
+  }
+}
 
 
 // Footer

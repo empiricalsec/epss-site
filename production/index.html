@@ -1,8 +1,16 @@
-<!DOCTYPE html><html lang=en><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Exploit Prediction Scoring System (EPSS) Special Interest Group (SIG)</title><meta property=og:url content=https://www.first.org/epss/><meta property=og:type content=website><meta property=og:title content="Exploit Prediction Scoring System (EPSS)"><meta property=og:description content="Exploit Prediction Scoring System (EPSS)"><meta property=og:image content=d315ca1d94d505ac><meta property=og:image:width content=2400><meta property=og:image:height content=1260><meta property=og:locale content=en_US><meta name=twitter:card content=summary_large_image><meta property=twitter:domain content=epss.com><meta property=twitter:url content=https://www.first.org/epss/><meta name=twitter:title content="Exploit Prediction Scoring System (EPSS)"><meta name=twitter:description content=EPSS><meta name=twitter:image content=d315ca1d94d505ac><link rel=icon href=favicon.ico><link rel=stylesheet href=epss-site.css><script src=epss-site.js></script><body>
-    <header></header>
+<!DOCTYPE html><html lang=en><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Exploit Prediction Scoring System (EPSS) Special Interest Group (SIG)</title><meta property=og:url content=https://www.first.org/epss/><meta property=og:type content=website><meta property=og:title content="Exploit Prediction Scoring System (EPSS)"><meta property=og:description content="Exploit Prediction Scoring System (EPSS)"><meta property=og:image content=d315ca1d94d505ac><meta property=og:image:width content=2400><meta property=og:image:height content=1260><meta property=og:locale content=en_US><meta name=twitter:card content=summary_large_image><meta property=twitter:domain content=epss.com><meta property=twitter:url content=https://www.first.org/epss/><meta name=twitter:title content="Exploit Prediction Scoring System (EPSS)"><meta name=twitter:description content=EPSS><meta name=twitter:image content=d315ca1d94d505ac><link rel=icon href=favicon.ico><link rel=stylesheet href=epss-site.css><script src=epss-site.js></script><body class="flex flex-col gap-0">
+    <header class="bg-white fixed flex flex-row gap-2 items-center overflow-hidden self-center shadow-md w-full z-10">
+      <div class="bg-white p-2"><a href=https://www.first.org><img class="h-[28px] w-fit" src=first-logo.svg alt="First.org Logo"></a></div>
+      <p class="pb-1 pl-2"><a href=https://www.first.org>First.org</a></p>
+      <p class="first-orange pb-1">/</p>
+      <p class="flex-grow pb-1"><a href=index.html><strong>EPSS</strong></a></p>
+      <a class="flex flex-row gap-2 hover:!no-underline items-center pb-1 pr-3" href=#>
+        <p>Menu</p><img class="h-[28px] scale-80 w-fit" src=icon-menu.svg alt=Menu>
+      </a>
+    </header>
     <main class="flex flex-row gap-12 max-md:flex-col">
       <div class="flex flex-col gap-4 max-lg:order-2 max-w-[300px] md:h-[calc(100vh-70px)] md:shrink-0 md:sticky md:top-[32px] order-1 w-full">
-        <ul class="flex flex-col flex-grow gap-2 navigation">
+        <ul class="flex flex-col flex-grow gap-2 max-md:mt-0 mt-10 navigation">
           <li class="flex flex-row gap-2"><p>-<p><a href=#>What is EPSS?</a></li>
           <li class="flex flex-row gap-2"><p>-<p><a href=#>The EPSS Model</a></li>
           <li class="flex flex-row gap-2"><p>-<p><a href=#>User Guide</a></li>
@@ -23,9 +31,9 @@
           <p class="!text-[11px] -mt-2">Copyright © 2015—2026 by Forum of Incident Response and Security Teams, Inc. All Rights Reserved.</p>
         </div>
       </div>
-      <div class="flex flex-col gap-4 items-center max-md:mb-0 max-md:order-1 mb-12 order-2 w-full">
+      <div class="flex flex-col gap-4 items-center max-md:mb-0 max-md:order-1 my-20 order-2 w-full">
         <div class="flex flex-col gap-4 max-w-[820px] w-full">
-          <img class="h-[64px] max-lg:h-[48px] my-12 w-fit" src=assets/epss-logo.svg alt="EPSS Logo">
+          <img class="h-[64px] max-lg:h-[48px] mb-12 w-fit" src=assets/epss-logo.svg alt="EPSS Logo">
           <h1>What is EPSS?</h1>
           <h2>The <strong><span class=red-600>Exploit Prediction</span> Scoring System</strong> (EPSS) is a data-driven machine-learning model that estimates the probability that a published CVE will be exploited in the wild in the next 30 days.</h2>
           <p>It replaces subjective severity judgments with empirical signals from observed exploitation and ongoing activity, helping you focus limited remediation effort where attacks are most likely. EPSS publishes a 0–1 probability (with ranking percentiles) every day for every CVE and makes the data freely and openly accessible via CSV and API, so it slots easily into workflows and dashboards.</p>
