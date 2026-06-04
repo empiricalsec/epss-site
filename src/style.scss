@@ -107,32 +107,23 @@ $first-orange: #EF7D00;
   top: 0;
   right: 0;
   width: 0;
-  max-width: 480px;
-  background-color: $black;
   z-index: 100;
   flex-direction: column;
-  height: 100vh;
-  overflow-y: auto;
-  transition: width .3s ease-in-out;
-  &.max-w-full {
-    max-width: 100%;
-  }
-  p {
-    @media only screen and (max-width: 1000px) {
-      font-size: 20px;
-    }
-  }
+  transition: opacity .3s ease-in-out;
 }
 
 .exit-intent:target {
   visibility: visible;
   opacity: 1;
-  width: 100%;
-  transition: width .3s ease-in-out;
+  width: auto;
+  transition: opacity .3s ease-in-out;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 }
 
 .close-exit-intent {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0);
   cursor: default;
   position: fixed;
   top: 0;
@@ -141,7 +132,7 @@ $first-orange: #EF7D00;
   bottom: 0;
   opacity: 0;
   visibility: hidden;
-  transition: all .3s ease-in-out;
+  transition: opacity .3s ease-in-out;
   z-index: 90;
 }
 
@@ -149,40 +140,6 @@ $first-orange: #EF7D00;
   opacity: 1;
   visibility: visible;
   width: 100%;
-}
-
-@keyframes changeWidth {
-    0% {
-        width: 0;
-        left: 0;
-    }
-    50% {
-        width: 100%;
-        right: 0;
-    }
-    100% {
-        width: 0;
-        right: 0;
-    }
-}
-
-.modal-trigger {
-  border-bottom: 2px solid $black;
-  transition: background .3s ease-in-out;
-  overflow: hidden;
-  position: relative;
-  &:hover {
-    color: $black;
-  }
-  a:after {
-    animation: changeWidth 3s ease-in-out infinite;
-    content:"";
-    display: block;
-    position: absolute;
-    height: 2px;
-    bottom: -2px;
-    background-color: $black;
-  }
 }
 
 // Styles
