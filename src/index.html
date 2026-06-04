@@ -28,7 +28,7 @@
   <body>
     <header></header>
     <main class="flex flex-row max-md:flex-col gap-4 min-h-screen">
-      <div class="flex flex-col gap-4 order-1 max-md:order-2 max-w-[300px]">
+      <div class="flex flex-col gap-4 order-1 max-md:order-2 w-full max-w-[300px]">
         <ul class="navigation flex flex-col gap-2 flex-grow">
           <li class="flex flex-row gap-2"><p>-</p><p><a href="#">What is EPSS?</a></p></li>
           <li class="flex flex-row gap-2"><p>-</p><p><a href="#">The EPSS Model</a></p></li>
@@ -49,13 +49,13 @@
         <p class="!text-[11px] -mt-2">Copyright © 2015—2026 by Forum of Incident Response and Security Teams, Inc. All Rights Reserved.</p>
       </div>
       <div class="flex flex-col gap-4 items-center w-full order-2 max-md:order-1">
-        <div class="flex flex-col gap-4 max-w-[800px]">
+        <div class="flex flex-col gap-4 w-full max-w-[800px]">
           <img class="h-[64px] max-md:h-[48px] w-fit my-12" src="assets/epss-logo.svg" alt="EPSS Logo"/>
           <h1>What is EPSS?</h1>
           <h2>The <strong><span class="red-600">Exploit Prediction</span> Scoring System</strong> (EPSS) is a data-driven machine-learning model that estimates the probability that a published CVE will be exploited in the wild in the next 30 days.</h2>
           <p>It replaces subjective severity judgments with empirical signals from observed exploitation and ongoing activity, helping you focus limited remediation effort where attacks are most likely. EPSS publishes a 0–1 probability (with ranking percentiles) every day for every CVE and makes the data freely and openly accessible via CSV and API, so it slots easily into workflows and dashboards.</p>
         </div>
-        <div class="flex flex-col gap-4 mt-6 max-w-[800px]">
+        <div class="flex flex-col gap-4 mt-6 w-full max-w-[800px]">
           <h1>Goals</h1>
           <div class="flex flex-row gap-0 max-lg:flex-col">
             <h2 class="w-full border p-6 border-r-0 max-lg:border-b-0 max-lg:border-r-1 border-gray-300">
@@ -65,6 +65,9 @@
             <h2 class="w-full border p-6 border-gray-300">
               <strong>3. Create an open forum</strong> for experimentation, feedback, and constructive criticism to improve understanding of EPSS, inspire enhancements, and strengthen trust in data-driven vulnerability prioritization.</h2>
           </div>
+        </div>
+        <div class="flex flex-col gap-4 mt-6 w-full max-w-[800px]">
+          <h1>Chairs</h1>
         </div>
       </div>
     </main>
