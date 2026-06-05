@@ -42,7 +42,7 @@
             <li class="flex flex-row gap-2 px-4"><p class="w-full"><a class="flex" href="live-scores.html">Live Scores and Charts</a></p></li>
             <li class="flex flex-row gap-2 px-4"><p class="w-full"><a class="flex" href="api.html">API Documentation</a></p></li>
             <li class="flex flex-row gap-2 px-4"><p class="w-full"><a class="flex" href="faq.html">Frequently Asked Questions</a></p></li>
-            <li class="flex flex-row gap-2 px-4"><p class="w-full"><a class="flex items-center gap-1.5" href="https://github.com/empiricalsec/epss_scores" target="_blank" rel="noopener noreferrer">GitHub Scoring History <img class="inline-flex h-[16px]" src="assets/icon-external.svg" alt="external link" /></a></p></li>
+            <li class="flex flex-row gap-2 px-4"><p class="w-full"><a class="flex items-center gap-1.5" href="https://github.com/empiricalsec/epss_scores" target="_blank" rel="noopener noreferrer">Download Daily Data <img class="inline-flex h-[16px]" src="assets/icon-external.svg" alt="external link" /></a></p></li>
             <li class="mt-2 md:hidden flex flex-row gap-2 pt-2 px-4 border-t border-gray-300"><p class="text-center w-full opacity-60"><a href="#!" class="flex close-action justify-center">Close Menu</a></p></li>
           </ul>
         </div>
@@ -58,7 +58,7 @@
           <li class="flex flex-row gap-2"><p>-</p><p><a href="live-scores.html">Live Scores and Charts</a></p></li>
           <li class="flex flex-row gap-2"><p>-</p><p><a href="api.html">API Documentation</a></p></li>
           <li class="flex flex-row gap-2"><p>-</p><p><a href="faq.html">Frequently Asked Questions</a></p></li>
-          <li class="flex flex-row gap-2"><p>-</p><p><a class="flex items-center gap-1.5" href="https://github.com/empiricalsec/epss_scores" target="_blank" rel="noopener noreferrer">GitHub Scoring History <img class="inline-flex h-[16px]" src="assets/icon-external.svg" alt="external link" /></a></p></li>
+          <li class="flex flex-row gap-2"><p>-</p><p><a class="flex items-center gap-1.5" href="https://github.com/empiricalsec/epss_scores" target="_blank" rel="noopener noreferrer">Download Daily Data <img class="inline-flex h-[16px]" src="assets/icon-external.svg" alt="external link" /></a></p></li>
         </ul>
         <div class="flex flex-col gap-4">
           <img class="h-[28px] w-fit max-md:mt-12" src="assets/epss-mark.svg" alt="EPSS Logo" />
@@ -69,6 +69,22 @@
       <div class="flex flex-col gap-10 items-center w-full order-2 max-md:order-1 mt-26 mb-12 max-md:mb-0 max-md:mt-10">
         <div class="flex flex-col gap-4 w-full max-w-[820px]">
           <h1>Live Scores and Charts</h1>
+        </div>
+        <div class="flex flex-col gap-4 w-full max-w-[820px]">
+          <h2>Current Data Fields Available</h2>
+          <div class="flex flex-col gap-0 mb-6">
+            <h3 class="w-full border p-8 border-b-0 border-gray-300 rounded-t-lg"><strong>cve</strong> : The CVE identifier as specified by MITRE’s CVE List</h3>
+            <h3 class="w-full border p-8 border-b-0 border-gray-300"><strong>epss</strong> : the EPSS score representing the probability [0-1] of exploitation in the wild in the next 30 days (following score publication)</h3>
+            <h3 class="w-full border p-8 border-gray-300 rounded-b-lg"><strong>percentile</strong> : the percentile of the current score, the proportion of all scored vulnerabilities with the same or a lower EPSS score</h3>
+          </div>
+          <h2><a href="https://epss.empiricalsecurity.com/epss_scores-current.csv.gz" target="_blank" rel="noopener noreferrer">Download the Data</a></h2>
+          <p>The comma-separated values (CSV) contain the CVE Identifier and the EPSS score as of the date the data was generated.</p>
+          <p>All of the daily historical data for EPSS can be found in this github repo: <a href="https://github.com/empiricalsec/epss_scores" target="_blank" rel="noopener noreferrer">https://github.com/empiricalsec/epss_scores</a></p>
+          <p><strong>If you do historical analysis, keep in mind the following dates:</strong></p>
+          <p>No scores are available before 2021-04-14</p>
+          <p>EPSS v2 (v2022.01.01) started publishing on 2022-02-04, you will see a major shift in most scores on that day, and the files now include a comment at the start with # stating the model version and publish date.</p>
+          <p>EPSS v3 (v2023.03.01) started publishing on 2023-03-07, you will see a shift in scores on that day.</p>
+          <p>EPSS v4 (v2025.03.14) started publishing on 2025-03-17, you will see a shift in scores on that day.</p>
         </div>
       </div>
     </main>
