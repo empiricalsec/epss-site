@@ -1,5 +1,5 @@
-<!DOCTYPE html><html lang=en><meta name=viewport content="width=device-width, initial-scale=1.0"><title>API Documentation | Exploit Prediction Scoring System</title><meta property=og:url content=https://www.first.org/epss/><meta property=og:type content=website><meta property=og:title content="API Documentation | Exploit Prediction Scoring System"><meta property=og:description content="Exploit Prediction Scoring System (EPSS)"><meta property=og:image content=assets/epss-logo.svg><meta property=og:image:width content=2400><meta property=og:image:height content=1260><meta property=og:locale content=en_US><meta name=twitter:card content=summary_large_image><meta property=twitter:domain content=epss.com><meta property=twitter:url content=https://www.first.org/epss/><meta name=twitter:title content="API Documentation | Exploit Prediction Scoring System"><meta name=twitter:description content=EPSS><meta name=twitter:image content=assets/epss-logo.svg><link rel=icon href=favicon.ico><link rel=stylesheet href=epss-site.css><script src=epss-site.js></script><body class="flex flex-col gap-0">
-    <header class="bg-white fixed flex flex-row gap-2 items-center overflow-hidden self-center shadow-md w-full z-10">
+<!DOCTYPE html><html lang=en><meta name=viewport content="width=device-width, initial-scale=1.0"><title>API Documentation | Exploit Prediction Scoring System</title><meta property=og:url content=https://www.first.org/epss/><meta property=og:type content=website><meta property=og:title content="API Documentation | Exploit Prediction Scoring System"><meta property=og:description content="Exploit Prediction Scoring System (EPSS)"><meta property=og:image content=d315ca1d94d505ac><meta property=og:image:width content=2400><meta property=og:image:height content=1260><meta property=og:locale content=en_US><meta name=twitter:card content=summary_large_image><meta property=twitter:domain content=epss.com><meta property=twitter:url content=https://www.first.org/epss/><meta name=twitter:title content="API Documentation | Exploit Prediction Scoring System"><meta name=twitter:description content=EPSS><meta name=twitter:image content=d315ca1d94d505ac><link rel=icon href=favicon.ico><link rel=stylesheet href=epss-site.css><script src=epss-site.js></script><body class="flex flex-col gap-0">
+    <header class="bg-white fixed flex flex-row gap-2 items-center overflow-hidden self-center shadow-sm w-full z-10">
       <div class="bg-white p-2"><a href=https://www.first.org target=_blank rel="noopener noreferrer"><img class="h-[28px] w-fit" src=first-logo.svg alt="First.org Logo"></a></div>
       <p class="pb-1 pl-2"><a href=https://www.first.org target=_blank rel="noopener noreferrer">First.org</a></p>
       <p class="first-orange pb-1">/</p>
@@ -24,7 +24,8 @@
     </header>
     <main class="flex flex-row gap-12 max-md:flex-col">
       <div class="flex flex-col gap-4 max-lg:order-2 max-w-[300px] md:h-[calc(100vh-70px)] md:shrink-0 md:sticky md:top-[32px] order-1 w-full">
-        <ul class="flex flex-col flex-grow gap-2 max-md:mt-0 mt-10 navigation">
+        <ul class="flex flex-col flex-grow gap-2 max-md:hidden max-md:mt-0 mt-12 navigation">
+          <a href=index.html><img class="h-[36px] mb-6 w-fit" src=assets/epss-logo.svg alt="EPSS Logo"></a>
           <li class="flex flex-row gap-2"><p>-<p><a href=index.html>Home</a></li>
           <li class="flex flex-row gap-2"><p>-<p><a href=how-epss-works.html>How EPSS Works</a></li>
           <li class="flex flex-row gap-2"><p>-<p><a href=#>Live Scores and Charts</a></li>
@@ -38,34 +39,34 @@
           <p class="!text-[11px] -mt-2">Copyright © 2015—2026 by Forum of Incident Response and Security Teams, Inc. All Rights Reserved.</p>
         </div>
       </div>
-      <div class="flex flex-col gap-4 items-center max-md:mb-0 max-md:order-1 my-12 order-2 w-full">
-        <div class="flex flex-col gap-4 max-w-[1100px] w-full">
+      <div class="flex flex-col gap-10 items-center max-md:mb-0 max-md:mt-10 max-md:order-1 mb-12 mt-26 order-2 w-full">
+        <div class="flex flex-col gap-4 max-w-[820px] w-full">
           <h1>API Documentation</h1>
           <h3>The base URL for all EPSS API calls is:</h3>
-          <p class="bg-black break-all font-mono mb-4 p-5 rounded-lg text-white">https://api.first.org/data/v1/epss</p>
+          <p class="bg-black break-all font-mono p-5 rounded-lg text-white">https://api.first.org/data/v1/epss</p>
         </div>
-        <div class="flex flex-col gap-2 max-w-[1100px] w-full">
+        <div class="flex flex-col gap-2 max-w-[820px] w-full">
           <h2 class=mb-2>Most recent CVE(s):</h2>
           <h3>Show EPSS scores for the first 100 CVEs:</h3>
           <p class="bg-gray-200 break-all font-mono mb-4 p-5 rounded-lg">https://api.first.org/data/v1/epss</p>
           <h3>Single CVE (Show EPSS score for CVE XXXXX):</h3>
           <p class="bg-gray-200 break-all font-mono mb-4 p-5 rounded-lg">https://api.first.org/data/v1/epss?cve=CVE-2022-27225</p>
           <h3>Batch (Show EPSS scores for a list of CVEs):</h3>
-          <p class="bg-gray-200 break-all font-mono mb-4 p-5 rounded-lg">https://api.first.org/data/v1/epss?cve=CVE-2022-27225,CVE-2022-27223,CVE-2022-27218</p>
+          <p class="bg-gray-200 break-all font-mono p-5 rounded-lg">https://api.first.org/data/v1/epss?cve=CVE-2022-27225,CVE-2022-27223,CVE-2022-27218</p>
         </div>
-        <div class="flex flex-col gap-2 max-w-[1100px] w-full">
+        <div class="flex flex-col gap-2 max-w-[820px] w-full">
           <h2 class=mb-2>Pagination</h2>
           <h3>You can set the offset pages with:</h3>
-          <p class="bg-gray-200 break-all font-mono mb-4 p-5 rounded-lg">https://api.first.org/data/v1/epss?envelope=true&amp;pretty=true&amp;offset=160000</p>
+          <p class="bg-gray-200 break-all font-mono p-5 rounded-lg">https://api.first.org/data/v1/epss?envelope=true&amp;pretty=true&amp;offset=160000</p>
         </div>
-        <div class="flex flex-col gap-2 max-w-[1100px] w-full">
+        <div class="flex flex-col gap-2 max-w-[820px] w-full">
           <h2 class=mb-2>CVEs for a particular date</h2>
           <h3>Single CVE (Show EPSS score for CVE XXXXX for yyyy-mm-dd):</h3>
           <p class="bg-gray-200 break-all font-mono mb-4 p-5 rounded-lg">https://api.first.org/data/v1/epss?cve=CVE-2022-26332&amp;date=2022-03-05</p>
           <h3>Batch (Show EPSS scores for a comma separated list of CVEs for yyyy-mm-dd):</h3>
-          <p class="bg-gray-200 break-all font-mono mb-4 p-5 rounded-lg">https://api.first.org/data/v1/epss?cve=CVE-2022-26332,CVE-2022-26315,CVE-2022-26181&amp;date=2022-03-05</p>
+          <p class="bg-gray-200 break-all font-mono p-5 rounded-lg">https://api.first.org/data/v1/epss?cve=CVE-2022-26332,CVE-2022-26315,CVE-2022-26181&amp;date=2022-03-05</p>
         </div>
-        <div class="flex flex-col gap-2 max-w-[1100px] w-full">
+        <div class="flex flex-col gap-2 max-w-[820px] w-full">
           <h2 class=mb-2>Time Series</h2>
           <h3>Single (Show the EPSS scores for CVE XXXX for each of the past 30 days):</h3>
           <p class="bg-gray-200 break-all font-mono mb-4 p-5 rounded-lg">https://api.first.org/data/v1/epss?cve=CVE-2022-25204&amp;scope=time-series</p>
@@ -74,13 +75,13 @@
           <h3>All CVEs above X probability score. i.e. show all CVEs with probability scores greater than X:</h3>
           <p class="bg-gray-200 break-all font-mono mb-4 p-5 rounded-lg">https://api.first.org/data/v1/epss?epss-gt=0.95</p>
           <h3>All CVEs above X percentile. i.e. show all CVEs with percentile greater than X:</h3>
-          <p class="bg-gray-200 break-all font-mono mb-4 p-5 rounded-lg">https://api.first.org/data/v1/epss?percentile-gt=0.95</p>
+          <p class="bg-gray-200 break-all font-mono p-5 rounded-lg">https://api.first.org/data/v1/epss?percentile-gt=0.95</p>
         </div>
-        <div class="flex flex-col gap-2 max-w-[1100px] w-full">
+        <div class="flex flex-col gap-2 max-w-[820px] w-full">
           <h2 class=mb-2>ALL CVEs</h2>
-          <h3 class=mb-4>Show EPSS scores for all CVEs for a particular date (yyyy-mm-dd). For this request, simply request the full csv directly as: <br><a href=https://epss.empiricalsecurity.com/epss_scores-YYYY-MM-DD.csv.gz target=_blank rel="noopener noreferrer">https://epss.empiricalsecurity.com/epss_scores-YYYY-MM-DD.csv.gz</a></h3>
+          <h3>Show EPSS scores for all CVEs for a particular date (yyyy-mm-dd). For this request, simply request the full csv directly as: <br><a href=https://epss.empiricalsecurity.com/epss_scores-YYYY-MM-DD.csv.gz target=_blank rel="noopener noreferrer">https://epss.empiricalsecurity.com/epss_scores-YYYY-MM-DD.csv.gz</a></h3>
         </div>
-        <div class="flex flex-col gap-2 max-w-[1100px] w-full">
+        <div class="flex flex-col gap-2 max-w-[820px] w-full">
           <h2 class=mb-2>API Notes</h2>
           <h3>You can nicely format the output with:</h3>
           <p class="bg-gray-200 break-all font-mono mb-4 p-5 rounded-lg">https://api.first.org/data/v1/epss?envelope=true&amp;pretty=true</p>
@@ -92,5 +93,6 @@
         </div>
       </div>
     </main>
+    <img class="h-fit max-md:hidden opacity-15 p-8 w-full" src=epss-logo-outline.svg alt="EPSS Logo">
   
 
