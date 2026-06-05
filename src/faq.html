@@ -3,11 +3,11 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FAQ Documentation | Exploit Prediction Scoring System</title>
+    <title>Frequently Asked Questions | Exploit Prediction Scoring System</title>
     <!-- Open Graph Meta Tags -->
     <meta property="og:url" content="https://www.first.org/epss/">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="FAQ | Exploit Prediction Scoring System">
+    <meta property="og:title" content="Frequently Asked Questions | Exploit Prediction Scoring System">
     <meta property="og:description" content="Exploit Prediction Scoring System (EPSS)">
     <meta property="og:image" content="assets/epss-logo.svg">
     <meta property="og:image:width" content="2400">
@@ -17,7 +17,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="epss.com">
     <meta property="twitter:url" content="https://www.first.org/epss/">
-    <meta name="twitter:title" content="FAQ | Exploit Prediction Scoring System">
+    <meta name="twitter:title" content="Frequently Asked Questions | Exploit Prediction Scoring System">
     <meta name="twitter:description" content="EPSS">
     <meta name="twitter:image" content="assets/epss-logo.svg">
 
@@ -69,6 +69,49 @@
       <div class="flex flex-col gap-10 items-center w-full order-2 max-md:order-1 mt-26 mb-12 max-md:mb-0 max-md:mt-10">
         <div class="flex flex-col gap-4 w-full max-w-[820px]">
           <h1>Frequently Asked Questions</h1>
+        </div>
+        <div class="flex flex-col gap-6 w-full max-w-[820px]">
+          <!-- Question -->
+          <details class="accordion-wrapper flex flex-col gap-4 w-full border-b border-gray-300 pb-2">
+            <summary class="flex flex-row gap-4 items-center cursor-pointer">
+              <h2 class="!font-normal flex flex-row gap-1 items-start"><img class="-ml-2 mt-1.5" src="assets/icon-chevron.svg" alt="toggle" />What is EPSS, and what is it not?</h2>
+            </summary>
+            <div class="content pb-6 flex flex-col gap-4">
+              <p>EPSS is a measure of exploitability. Specifically, EPSS is estimating the probability of observing any exploitation attempts against a vulnerability in the next 30 days. This is accomplished by observing and recording exploitation attempts against vulnerabilities and then collecting as much information as we can about each of those vulnerabilities. Since EPSS is estimating the probability of exploitation activity, <strong>EPSS is best used when there is no other evidence of active exploitation.</strong> When evidence or other intelligence is available about exploitation activity, that should supersede the EPSS estimate (see “Everyone knows this vulnerability has been exploited…” question).</p>
+              <p>EPSS is only estimating the probability that a vulnerability will be exploited. EPSS does not account for any specific environmental, nor compensating controls, nor does it make any attempt to estimate the <strong>impact</strong> of a vulnerability being exploited. <strong>EPSS is not, and should not be treated as a complete picture of risk,</strong> but it can be used as one of the inputs into risk analyses. For a visual representation of this we turn to the <a href="https://publications.opengroup.org/c20a" target="_blank" rel="noopener noreferrer">Open Group Standard: Risk Analysis (O-RA)</a>, specifically Figure 2 titled, "Decomposing an Open FAIR Loss Event". We have modified the original image to annotate where the strength of EPSS lies within a risk analysis framework.</p>
+              <p>EPSS will help measure the threat associated with a published CVE, the rest of the considerations for a complete risk analysis should rely on existing or alternative methods.</p>
+            </div>
+          </details>
+          <!-- Question -->
+          <details class="accordion-wrapper flex flex-col gap-4 w-full border-b border-gray-300 pb-2">
+            <summary class="flex flex-row gap-4 items-center cursor-pointer">
+              <h2 class="!font-normal flex flex-row gap-1 items-start"><img class="-ml-2 mt-1.5" src="assets/icon-chevron.svg" alt="toggle" />Where do I get EPSS scores?</h2>
+            </summary>
+            <div class="content pb-6 flex flex-col gap-4">
+              <p>There are two methods for getting EPSS scores. First a daily downloadable CSV with all the CVEs may be downloaded from a direct HTTP request from the data and statistics page. Second, an API exists and is documented at <a href="https://api.first.org/epss/" target="_blank" rel="noopener noreferrer">https://api.first.org/epss/</a></p>
+            </div>
+          </details>
+          <!-- Question -->
+          <details class="accordion-wrapper flex flex-col gap-4 w-full border-b border-gray-300 pb-2">
+            <summary class="flex flex-row gap-4 items-center cursor-pointer">
+              <h2 class="!font-normal flex flex-row gap-1 items-start"><img class="-ml-2 mt-1.5" src="assets/icon-chevron.svg" alt="toggle" />As a practitioner where do I start with EPSS? How do I use it?</h2>
+            </summary>
+            <div class="content pb-6 flex flex-col gap-4">
+              <p>EPSS is helpful in a variety of ways, so specific advice may be difficult. But first and foremost, get the data that EPSS is producing. It is refreshed every day and for each published CVE. EPSS produces a probability of exploitation activity (a value between 0 and 1) in the next 30 days, which is the primary EPSS score. EPSS also puts that score in context by producing the percentile, which is the proportion of vulnerabilities that are scored at or less than the vulnerability. The EPSS values can be used as an initial prioritization tool for observed vulnerabilities in your environment, it can help assess the chance that any particular vulnerability will experience exploitation activity in the wild.</p>
+            </div>
+          </details>
+          <!-- Question -->
+          <details class="accordion-wrapper flex flex-col gap-4 w-full border-b border-gray-300 pb-2">
+            <summary class="flex flex-row gap-4 items-center cursor-pointer">
+              <h2 class="!font-normal flex flex-row gap-1 items-start"><img class="-ml-2 mt-1.5" src="assets/icon-chevron.svg" alt="toggle" />How is EPSS different from CVSS? Should this be used with, or replace, CVSS?</h2>
+            </summary>
+            <div class="content pb-6 flex flex-col gap-4">
+              <p>Both EPSS and CVSS seek to help network defenders better prioritize vulnerability management. Both efforts are run by volunteer groups of researchers, practitioners, academics and government personnel. And the scores from both efforts are made available to the public at no cost.</p>
+              <p>EPSS is a measure of threat – it estimates the probability that a vulnerability will experience exploitation activity in the wild. It accomplishes this entirely by data-driven, empirical analysis. Because EPSS produces a probability, it can scale to estimate the probability that at least one out of a larger set of vulnerabilities may be exploited . That larger set could represent all vulnerabilities on a laptop, network appliance, subnet, or an entire office location.</p>
+              <p>CVSS, on the other hand, is thought of as a measure of overall “severity” of a vulnerability. The CVSS Base metrics are evaluated based on the immutable properties of a vulnerability. Those values are then transformed into numerical form, and then an equation is used to approximate the rank ordering of vulnerability severity. CVSS cannot be used to combine the scores of multiple vulnerabilities.</p>
+              <p>As for how to use EPSS together with CVSS, this is a complicated question, with many possible answers. Please see <a href="https://www.first.org/epss/user-guide.html" target="_blank" rel="noopener noreferrer">user guide</a> article for a more complete discussion.</p>
+            </div>
+          </details>
         </div>
       </div>
     </main>
