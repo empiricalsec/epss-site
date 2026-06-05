@@ -65,25 +65,32 @@
           <p class="!text-[11px] -mt-2">Copyright © 2015—2026 by Forum of Incident Response and Security Teams, Inc. All Rights Reserved.</p>
         </div>
       </div>
-      <div class="flex flex-col gap-10 items-center w-full order-2 max-md:order-1 my-12 max-md:mb-0">
+      <div class="flex flex-col gap-4 items-center w-full order-2 max-md:order-1 my-12 max-md:mb-0">
         <div class="flex flex-col gap-4 w-full">
           <h1>EPSS API</h1>
           <h3>The base URL for all EPSS API calls is:</h3>
-          <p class="font-mono bg-black text-white p-5 rounded-lg break-all">https://api.first.org/data/v1/epss</p>
+          <p class="font-mono bg-black text-white p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss</p>
         </div>
         <div class="flex flex-col gap-2 w-full">
           <h2 class="mb-2">Most recent CVE(s):</h2>
           <h3>Show EPSS scores for the first 100 CVEs:</h3>
           <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss</p>
-          <h3>Single CVE (Single CVE: show EPSS score for CVE XXXXX):</h3>
+          <h3>Single CVE (Show EPSS score for CVE XXXXX):</h3>
           <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?cve=CVE-2022-27225</p>
           <h3>Batch (Show EPSS scores for a list of CVEs):</h3>
           <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?cve=CVE-2022-27225,CVE-2022-27223,CVE-2022-27218</p>
         </div>
         <div class="flex flex-col gap-2 w-full">
           <h2 class="mb-2">Pagination</h2>
-          <h3>You can set the offset (pages) with:</h3>
+          <h3>You can set the offset pages with:</h3>
           <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?envelope=true&pretty=true&offset=160000</p>
+        </div>
+        <div class="flex flex-col gap-2 w-full">
+          <h2 class="mb-2">CVEs for a particular date</h2>
+          <h3>Single CVE (Show EPSS score for CVE XXXXX for yyyy-mm-dd):</h3>
+          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?cve=CVE-2022-26332&date=2022-03-05</p>
+          <h3>Batch (Show EPSS scores for a comma separated list of CVEs for yyyy-mm-dd):</h3>
+          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?cve=CVE-2022-26332,CVE-2022-26315,CVE-2022-26181&date=2022-03-05</p>
         </div>
       </div>
     </main>
