@@ -75,34 +75,34 @@
         <div class="flex flex-col gap-2 w-full max-w-[820px]">
           <h2 class="mb-2">Most recent CVE(s):</h2>
           <h3>Show EPSS scores for the first 100 CVEs:</h3>
-          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss</p>
+          <p class="font-mono bg-gray-100 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss</p>
           <h3>Single CVE (Show EPSS score for CVE XXXXX):</h3>
-          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?cve=CVE-2022-27225</p>
+          <p class="font-mono bg-gray-100 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?cve=CVE-2022-27225</p>
           <h3>Batch (Show EPSS scores for a list of CVEs):</h3>
-          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all">https://api.first.org/data/v1/epss?cve=CVE-2022-27225,CVE-2022-27223,CVE-2022-27218</p>
+          <p class="font-mono bg-gray-100 p-5 rounded-lg break-all">https://api.first.org/data/v1/epss?cve=CVE-2022-27225,CVE-2022-27223,CVE-2022-27218</p>
         </div>
         <div class="flex flex-col gap-2 w-full max-w-[820px]">
           <h2 class="mb-2">Pagination</h2>
           <h3>You can set the offset pages with:</h3>
-          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all">https://api.first.org/data/v1/epss?envelope=true&pretty=true&offset=160000</p>
+          <p class="font-mono bg-gray-100 p-5 rounded-lg break-all">https://api.first.org/data/v1/epss?envelope=true&pretty=true&offset=160000</p>
         </div>
         <div class="flex flex-col gap-2 w-full max-w-[820px]">
           <h2 class="mb-2">CVEs for a particular date</h2>
           <h3>Single CVE (Show EPSS score for CVE XXXXX for yyyy-mm-dd):</h3>
-          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?cve=CVE-2022-26332&date=2022-03-05</p>
+          <p class="font-mono bg-gray-100 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?cve=CVE-2022-26332&date=2022-03-05</p>
           <h3>Batch (Show EPSS scores for a comma separated list of CVEs for yyyy-mm-dd):</h3>
-          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all">https://api.first.org/data/v1/epss?cve=CVE-2022-26332,CVE-2022-26315,CVE-2022-26181&date=2022-03-05</p>
+          <p class="font-mono bg-gray-100 p-5 rounded-lg break-all">https://api.first.org/data/v1/epss?cve=CVE-2022-26332,CVE-2022-26315,CVE-2022-26181&date=2022-03-05</p>
         </div>
         <div class="flex flex-col gap-2 w-full max-w-[820px]">
           <h2 class="mb-2">Time Series</h2>
           <h3>Single (Show the EPSS scores for CVE XXXX for each of the past 30 days):</h3>
-          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?cve=CVE-2022-25204&scope=time-series</p>
+          <p class="font-mono bg-gray-100 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?cve=CVE-2022-25204&scope=time-series</p>
           <h3>Top N CVEs with the highest scores. i.e. show the 100 highest scoring CVEs (works for either probability or percentile):</h3>
-          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?order=!epss</p>
+          <p class="font-mono bg-gray-100 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?order=!epss</p>
           <h3>All CVEs above X probability score. i.e. show all CVEs with probability scores greater than X:</h3>
-          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?epss-gt=0.95</p>
+          <p class="font-mono bg-gray-100 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?epss-gt=0.95</p>
           <h3>All CVEs above X percentile. i.e. show all CVEs with percentile greater than X:</h3>
-          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all">https://api.first.org/data/v1/epss?percentile-gt=0.95</p>
+          <p class="font-mono bg-gray-100 p-5 rounded-lg break-all">https://api.first.org/data/v1/epss?percentile-gt=0.95</p>
         </div>
         <div class="flex flex-col gap-2 w-full max-w-[820px]">
           <h2 class="mb-2">ALL CVEs</h2>
@@ -111,9 +111,9 @@
         <div class="flex flex-col gap-2 w-full max-w-[820px]">
           <h2 class="mb-2">API Notes</h2>
           <h3>You can nicely format the output with:</h3>
-          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?envelope=true&pretty=true</p>
+          <p class="font-mono bg-gray-100 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?envelope=true&pretty=true</p>
           <h3>The above parameters can be combined (when they make sense), so you can query for CVEs with percentile greater than X on date yyyy-mm-dd with time series (up to the date specified) sorted by EPSS (descending):</h3>
-          <p class="font-mono bg-gray-200 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?date=2022-03-05&epss-gt=0.95&order=!epss</p>
+          <p class="font-mono bg-gray-100 p-5 rounded-lg break-all mb-4">https://api.first.org/data/v1/epss?date=2022-03-05&epss-gt=0.95&order=!epss</p>
           <h3 class="mb-4">See <a href="https://api.first.org/#Global-parameters" target="_blank" rel="noopener noreferrer">https://api.first.org/#Global-parameters</a> for paging with offset and limit.</h3>
           <h3 class="mb-4">More documentation is available at <a href="https://api.first.org/epss" target="_blank" rel="noopener noreferrer">https://api.first.org/epss</a></h3>
           <h3 class="mb-4">Historic EPSS scores are available back to April 14th, 2021.</h3>
