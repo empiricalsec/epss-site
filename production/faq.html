@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang=en><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Frequently Asked Questions | Exploit Prediction Scoring System</title><meta property=og:url content=https://www.first.org/epss/><meta property=og:type content=website><meta property=og:title content="Frequently Asked Questions | Exploit Prediction Scoring System"><meta property=og:description content="Exploit Prediction Scoring System (EPSS)"><meta property=og:image content=d315ca1d94d505ac><meta property=og:image:width content=2400><meta property=og:image:height content=1260><meta property=og:locale content=en_US><meta name=twitter:card content=summary_large_image><meta property=twitter:domain content=epss.com><meta property=twitter:url content=https://www.first.org/epss/><meta name=twitter:title content="Frequently Asked Questions | Exploit Prediction Scoring System"><meta name=twitter:description content=EPSS><meta name=twitter:image content=d315ca1d94d505ac><link rel=icon href=favicon.ico><link rel=stylesheet href=epss-site.css><script src=epss-site.js></script><body class="flex flex-col gap-0">
     <header class="bg-white fixed flex flex-row gap-2 items-center overflow-hidden self-center shadow-sm w-full z-10">
-      <div class="bg-white p-2"><a href=https://www.first.org target=_blank rel="noopener noreferrer"><img class="h-[28px] w-fit" src=first-logo.svg alt="First.org Logo"></a></div>
+      <div class="bg-white p-2"><a href=index.html><img class="h-[28px] w-fit" src=first-logo.svg alt="First.org Logo"></a></div>
       <p class="pb-1 pl-2"><a href=https://www.first.org target=_blank rel="noopener noreferrer">First.org</a></p>
       <p class="first-orange pb-1">/</p>
       <p class="flex-grow pb-1"><a href=index.html><strong>EPSS</strong></a></p>
@@ -25,7 +25,7 @@
     <main class="flex flex-row gap-12 max-md:flex-col">
       <div class="flex flex-col gap-4 max-lg:order-2 max-w-[300px] md:h-[calc(100vh-70px)] md:shrink-0 md:sticky md:top-[32px] order-1 w-full">
         <ul class="flex flex-col flex-grow gap-2 max-md:hidden max-md:mt-0 mt-12 navigation">
-          <a href=index.html><img class="h-[36px] mb-6 w-fit" src=assets/epss-logo.svg alt="EPSS Logo"></a>
+          <a href=index.html><img class="h-[36px] mb-6 w-[225px]" src=assets/epss-logo.svg alt="EPSS Logo"></a>
           <li class="flex flex-row gap-2"><p>-<p><a href=index.html>Home</a></li>
           <li class="flex flex-row gap-2"><p>-<p><a href=how-epss-works.html>How EPSS Works</a></li>
           <li class="flex flex-row gap-2"><p>-<p><a href=live-data.html>Live Data and Charts</a></li>
@@ -34,7 +34,7 @@
           <li class="flex flex-row gap-2"><p>-<p><a class="flex gap-1.5 items-center" href=https://github.com/empiricalsec/epss_scores target=_blank rel="noopener noreferrer">Download Daily Data <img class="h-[16px] inline-flex" src=icon-external.svg alt="external link"></a></li>
         </ul>
         <div class="flex flex-col gap-4">
-          <img class="h-[28px] max-md:mt-12 w-fit" src=epss-mark.svg alt="EPSS Logo">
+          <img class="h-[28px] max-md:mt-12 w-[38px]" src=epss-mark.svg alt="EPSS Logo">
           <p class=footer>Powered by Empirical Security</p>
           <p class="!text-[11px] -mt-2">Copyright © 2015—2026 by Forum of Incident Response and Security Teams, Inc. All Rights Reserved.</p>
         </div>
@@ -136,7 +136,7 @@
               <h2 class="!font-normal flex flex-row gap-1 items-start"><img class="-ml-2 mt-1.5" src=icon-chevron.svg alt=toggle>The EPSS score for CVE-20XX-XXXX is higher/lower than I think it should be, why is that?</h2>
             </summary>
             <div class="content flex flex-col gap-4 pb-6">
-              <p>The practical — though probably less satisfying answer -- is that any model is going to provide results based on averages of everything it sees. So yes, it is certainly possible (and probably expected) that for any particular vulnerability, the EPSS score may not match one's expectations of what we think it should be, or what one organization has seen on its network. But the hope is that overall, when we look at more and more CVEs with the same set of features, that the EPSS score will tend toward the actual probability (the ground truth).</p>
+              <p>The practical — though probably less satisfying answer — is that any model is going to provide results based on averages of everything it sees. So yes, it is certainly possible (and probably expected) that for any particular vulnerability, the EPSS score may not match one's expectations of what we think it should be, or what one organization has seen on its network. But the hope is that overall, when we look at more and more CVEs with the same set of features, that the EPSS score will tend toward the actual probability (the ground truth).</p>
               <p>But again, because EPSS is entirely data driven, any results are based off of what it actually sees in the wild, and not based on subjective or human intuition.</p>
             </div>
           </details>
