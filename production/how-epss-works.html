@@ -46,23 +46,28 @@
         </div>
         <div class="flex flex-col gap-4 max-w-[820px] w-full">
           <h2>The Steps</h2>
-          <div class="flex flex-col gap-0 mb-6">
-            <h3 class="border border-b-0 border-gray-300 p-8 rounded-t-lg w-full">
-              1. Collect as much vulnerability information as we can from a variety of sources.
-            </h3>
-            <h3 class="border border-b-0 border-gray-300 p-8 w-full">
-              2. Collect evidence of daily exploitation activity.
-            </h3>
-            <h3 class="border border-b-0 border-gray-300 p-8 w-full">
-              3. Train a model: discover/learn the relationship between the vulnerability information and the exploitation activity.
-            </h3>
-            <h3 class="border border-b-0 border-gray-300 p-8 w-full">
-              4. Measure the performance of the model, tweak and repeat step 3 to optimize the model.
-            </h3>
-            <h3 class="border border-gray-300 p-8 rounded-b-lg w-full">
-              5. On a daily basis: refresh the vulnerability information (step 1) and use the model (step 3) to produce daily estimates of the probability of exploitation in the next 30 days for each published CVE.
-            </h3>
-          </div>
+          <ul class="flex flex-col gap-0 mb-6">
+            <li class="border border-b-0 border-gray-300 flex flex-row gap-4 items-start p-8 rounded-t-lg w-full">
+              <h3 class="border flex h-12 items-center justify-center red-600 rounded-full shrink-0 w-12"><strong>1</strong></h3>
+              <h3>Collect as much vulnerability information as we can from a variety of sources.</h3>
+            </li>
+            <li class="border border-b-0 border-gray-300 flex flex-row gap-4 items-center p-8 w-full">
+              <h3 class="border flex h-12 items-center justify-center red-600 rounded-full shrink-0 w-12"><strong>2</strong></h3>
+              <h3>Collect evidence of daily exploitation activity.</h3>
+            </li>
+            <li class="border border-b-0 border-gray-300 flex flex-row gap-4 items-start p-8 w-full">
+              <h3 class="border flex h-12 items-center justify-center red-600 rounded-full shrink-0 w-12"><strong>3</strong></h3>
+              <h3>Train a model: discover/learn the relationship between the vulnerability information and the exploitation activity.</h3>
+            </li>
+            <li class="border border-b-0 border-gray-300 flex flex-row gap-4 items-start p-8 w-full">
+              <h3 class="border flex h-12 items-center justify-center red-600 rounded-full shrink-0 w-12"><strong>4</strong></h3>
+              <h3>Measure the performance of the model, tweak and repeat step 3 to optimize the model.</h3>
+            </li>
+            <li class="border border-gray-300 flex flex-row gap-4 items-start p-8 rounded-b-lg w-full">
+              <h3 class="border flex h-12 items-center justify-center red-600 rounded-full shrink-0 w-12"><strong>5</strong></h3>
+              <h3>On a daily basis: refresh the vulnerability information (step 1) and use the model (step 3) to produce daily estimates of the probability of exploitation in the next 30 days for each published CVE.</h3>
+            </li>
+          </ul>
            <p>We will walk through these steps below. For those wanting to know more, a detailed explanation of the background and rigor put into EPSS is covered in the <a href=https://arxiv.org/abs/2302.14172 target=_blank rel="noopener noreferrer">latest published EPSS paper.</a></p>
         </div>
         <div class="flex flex-col gap-4 max-w-[820px] w-full">
