@@ -7,7 +7,27 @@
 
 
 <url>
-  <loc>https://www.first.org/epss/</loc>
+  <loc>https://empiricalsec.github.io/epss-site/index.html</loc>
+  <lastmod>2026-06-04T03:38:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://empiricalsec.github.io/epss-site/how-epss-works.html</loc>
+  <lastmod>2026-06-04T03:38:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://empiricalsec.github.io/epss-site/live-data.html</loc>
+  <lastmod>2026-06-04T03:38:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://empiricalsec.github.io/epss-site/api.html</loc>
+  <lastmod>2026-06-04T03:38:00+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://empiricalsec.github.io/epss-site/faq.html</loc>
   <lastmod>2026-06-04T03:38:00+00:00</lastmod>
   <priority>1.00</priority>
 </url>
