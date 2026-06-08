@@ -1,4 +1,4 @@
-<div align="lef">
+<div align="center">
   <img src="https://empiricalsec.github.io/epss-site/epss-logo.svg" alt="EPSS Logo" width="400">
 </div>
 
