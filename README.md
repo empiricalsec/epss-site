@@ -37,14 +37,12 @@ Verify the installation:
 yarn --version
 ```
 
----
-
 ## Getting Started
 
 1. Clone the repository and navigate to the project directory:
 
 ```bash
-cd <project-folder>
+cd epss-site
 ```
 
 2. Install dependencies:
@@ -65,9 +63,7 @@ yarn start
 http://localhost:1234
 ```
 
----
-
-## Available Scripts
+## Commands
 
 ### Start Development Server
 
@@ -87,17 +83,6 @@ Creates a production build in the `production/` directory.
 
 Before building, the existing `dist/` and `production/` directories are removed to ensure a clean build.
 
----
-
-## Project Stack
-
-* Node.js
-* Yarn
-* Parcel 2
-* Sass
-
----
-
 ## Troubleshooting
 
 If dependencies become corrupted or out of sync:
@@ -112,3 +97,10 @@ Then restart the development server:
 ```bash
 yarn start
 ```
+
+## Tech Stack
+
+* Node.js
+* Yarn
+* Parcel 2
+* Sass
