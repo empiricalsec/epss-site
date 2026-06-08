@@ -1,3 +1,7 @@
+<div align="lef">
+  <img src="https://empiricalsec.github.io/epss-site/epss-logo.svg" alt="EPSS Logo" width="400">
+</div>
+
 # EPSS Insiders
 
 ## Prerequisites
