@@ -106,45 +106,40 @@ $first-orange: #EF7D00;
   position: fixed;
   top: 0;
   right: 0;
-  width: auto;
+  width: 0;
   z-index: 100;
   flex-direction: column;
-  pointer-events: none;
   transition: opacity .3s ease-in-out;
+}
 
+.exit-intent:target {
+  visibility: visible;
+  opacity: 1;
+  width: auto;
+  transition: opacity .3s ease-in-out;
   @media only screen and (max-width: 768px) {
     width: 100%;
   }
-}
-
-/* Hover open */
-header:has(> a[href="#menu"]:hover) .exit-intent,
-
-/* Stay open while hovering the menu itself */
-.exit-intent:hover,
-
-/* Click open */
-.exit-intent:target {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
 }
 
 .close-exit-intent {
   background: rgba(0, 0, 0, 0);
   cursor: default;
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   opacity: 0;
   visibility: hidden;
-  z-index: 90;
   transition: opacity .3s ease-in-out;
+  z-index: 90;
 }
 
-/* Only show click-away overlay when targeted */
-.exit-intent:target + .close-exit-intent {
+.exit-intent:target+.close-exit-intent {
   opacity: 1;
   visibility: visible;
+  width: 100%;
 }
 
 // Styles
